@@ -849,50 +849,6 @@
 
         // --- CLOUD BACKEND FUNCTIONS (JSONBin) ---
 
-        async function initStore() {
-            // 1. Check if keys are configured
-            if (BIN_ID === "69f85c6e36566621a821e3da" || MASTER_KEY === "$2a$10$BoWsxx2gMgDAVKEPj98iC.NbPJlYWxSbAd33IoZqMWCwJtr.24bX.") {
-                console.error("⚠️ JSONBin Keys not configured. Using LocalStorage fallback.");
-                const savedPosts = localStorage.getItem('adriano_blog_posts');
-                if (savedPosts) {
-                    store = { ...defaultStore, posts: JSON.parse(savedPosts) };
-                } else {
-                    store = JSON.parse(JSON.stringify(defaultStore));
-                }
-                return;
-            }
-
-            // 2. Try to fetch from Cloud (JSONBin)
-            try {
-                console.log("📡 Fetching data from cloud (JSONBin)...");
-                const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
-                    method: 'GET',
-                    headers: {
-                        'X-Master-Key': MASTER_KEY,
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    // Merge the cloud posts with the default profile data
-                    store = { ...defaultStore, posts: data.record || [] };
-                    console.log("✅ Successfully loaded from cloud.");
-                    return; // Stop here, we have the data!
-                }
-            } catch (error) {
-                console.warn("⚠️ Failed to load from cloud. Using LocalStorage backup.", error);
-            }
-
-            // 3. Fallback: If cloud fails, load from LocalStorage (Browser Cache)
-            const savedPosts = localStorage.getItem('adriano_blog_posts');
-            if (savedPosts) {
-                store = { ...defaultStore, posts: JSON.parse(savedPosts) };
-            } else {
-                store = JSON.parse(JSON.stringify(defaultStore));
-            }
-        }
-
         async function savePosts() {
             // 1. Save to LocalStorage first (Instant backup)
             localStorage.setItem('adriano_blog_posts', JSON.stringify(store.posts));
