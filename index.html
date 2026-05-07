@@ -529,7 +529,7 @@
         </div>
     </div>
 
-    <script>
+        <script>
         // --- CONFIGURATION: EMAILJS SETTINGS ---
         // 1. Go to https://www.emailjs.com/ and sign up for free.
         // 2. Add an Email Service (e.g. Gmail).
@@ -542,7 +542,7 @@
 
         // Initialize EmailJS immediately
         (function () {
-            if (EMAILJS_PUBLIC_KEY !== "7v0tiVSSpVq-HoIdJ") {
+            if (EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY_HERE") {
                 emailjs.init(EMAILJS_PUBLIC_KEY);
             }
         })();
@@ -844,7 +844,7 @@
                     readTime: 15,
                     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=400&fit=crop",
                     tags: ["Finance", "NGO", "Management"],
-                    content: "Managing finances for non-profit organizations requires a unique blend of precision and flexibility. During my time as Finance Officer at RYLA-TL and volunteer at MSA, I developed systems for budgeting events like the RYLA CAMP, internship programs, and community service activities..."
+                    content: "Managing finances for non-profit organizations requires a unique blend of precision and flexibility. During my time as Finance Officer at RYLA-TL and volunteer at MSA, I developed systems for budgeting events like RYLA CAMP, internship programs, and community service activities..."
                 },
                 {
                     id: 5,
@@ -1329,7 +1329,8 @@
                                                 ` : ''}
                                             </div>
                                         </div>
-                                    `).join('')}
+                                    </div>
+                                `).join('')}
                                 </div>
                             </div>
                         </section>
@@ -1518,7 +1519,7 @@
                                     <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 sticky top-24 scroll-reveal">
                                         <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white">Categories</h3>
                                         <div class="space-y-2">
-                                            ${['All', 'Education', 'Leadership', 'Community', 'Finance', 'Media'].map(cat => `
+                                            ${['All', 'Education', 'Leadership', 'community', 'Finance', 'Media'].map(cat => `
                                                 <button onclick="filterBlog('${cat}')" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm flex items-center justify-between ${cat === 'All' ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 font-medium' : 'text-gray-600 dark:text-gray-400'}">
                                                     <span>${cat}</span>
                                                     <span class="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">${cat === 'All' ? store.posts.length : store.posts.filter(p => p.category === cat).length}</span>
@@ -1823,38 +1824,38 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Category</label>
                                 <select name="category" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
-                                    ${['Education', 'Leadership', 'Community', 'Finance', 'Media'].map(c => `<option value="${c}" ${post.category === c ? 'selected' : ''}>${c}</option>`).join('')}
+                                    ${['Education', 'Leadership', 'community', 'Finance', 'Media'].map(c => `<option value="${c}" ${post.category === c ? 'selected' : ''}>${c}</option>`).join('')}
                                 </select>
                             </div>
                             
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Date</label>
-                                <input type="date" name="date" value="${post.date}" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
+                                <input type="date" name="date" value="${post.date}" required class="w-full px-4 py-2 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
                             </div>
 
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Read Time (min)</label>
-                                <input type="number" name="readTime" value="${post.readTime}" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
+                                <input type="number" name="readTime" value="${post.readTime}" required class="w-full px-4 py-2 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
                             </div>
 
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Image URL</label>
-                                <input type="url" name="image" value="${post.image}" placeholder="https://..." class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
+                                <input type="url" name="image" value="${post.image}" placeholder="https://..." class="w-full px-4 py-2 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
                             </div>
 
                             <div class="md:col-span-2">
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Excerpt</label>
-                                <textarea name="excerpt" rows="2" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">${post.excerpt}</textarea>
+                                <textarea name="excerpt" rows="2" required class="w-full px-4 py-2 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">${post.excerpt}</textarea>
                             </div>
 
                             <div class="md:col-span-2">
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Content</label>
-                                <textarea name="content" rows="8" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none font-mono text-sm">${post.content}</textarea>
+                                <textarea name="content" rows="8" required class="w-full px-4 py-2 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none font-mono text-sm">${post.content}</textarea>
                             </div>
                             
                             <div class="md:col-span-2">
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tags (comma separated)</label>
-                                <input type="text" name="tags" value="${post.tags.join(', ')}" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
+                                <input type="text" name="tags" value="${post.tags.join(', ')}" class="w-full px-4 py-2 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 outline-none">
                             </div>
                         </div>
                         
@@ -1874,22 +1875,22 @@
                                 <p class="text-gray-600 dark:text-gray-400">Have a project in mind or want to collaborate? I am always open to discussing new opportunities, partnerships, and ideas for community development in Timor-Leste.</p>
                             </div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                            <div class="grid grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                                 <!-- UPDATED FORM WITH NAME ATTRIBUTES FOR EMAILJS -->
                                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 scroll-reveal">
                                     <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send a Message</h2>
                                     <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-5">
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-                                            <input type="text" name="user_name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Your name">
+                                            <input type="text" name="user_name" required class="w-full px-4 py-3 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="Your name">
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-                                            <input type="email" name="user_email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="your@email.com">
+                                            <input type="email" name="user_email" required class="w-full px-4 py-3 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all" placeholder="your@email.com">
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
-                                            <select name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all">
+                                            <select name="subject" class="w-full px-4 py-3 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all">
                                                 <option>Project Collaboration</option>
                                                 <option>Speaking Request</option>
                                                 <option>Job Opportunity</option>
@@ -1899,7 +1900,7 @@
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-                                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none" placeholder="Tell me about your project or idea..."></textarea>
+                                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none" placeholder="Tell me about your project or idea..."></textarea>
                                         </div>
                                         <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-[0.98]">
                                             <i class="fas fa-paper-plane mr-2"></i>Send Message
@@ -1949,6 +1950,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
                                     <div class="bg-gradient-to-br from-primary-600 to-purple-600 rounded-2xl p-8 text-white scroll-reveal">
                                         <h3 class="font-bold text-xl mb-2">Open for Collaboration</h3>
@@ -1959,6 +1961,8 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
                             </div>
                         </div>
                     </div>
@@ -2006,7 +2010,7 @@
                                         <span class="px-3 py-1 bg-white/90 dark:bg-gray-900/90 backdrop-blur text-xs font-bold rounded-full text-primary-700 dark:text-primary-300">${post.category}</span>
                                     </div>
                                 </div>
-                                <div class="p-6 md:w-3/5 flex flex-col justify-center">
+                                <div class="p-6 md:w-3/5 flex flex flex-col justify-center">
                                     <div class="flex items-center space-x-3 mb-3 text-sm text-gray-500 dark:text-gray-400">
                                         <span><i class="far fa-calendar mr-1"></i>${post.date}</span>
                                         <span><i class="far fa-clock mr-1"></i>${post.readTime} min read</span>
@@ -2142,7 +2146,7 @@
             e.preventDefault();
 
             // Check if EmailJS keys are configured
-            if (EMAILJS_PUBLIC_KEY === "7v0tiVSSpVq-HoIdJ") {
+            if (EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY_HERE") {
                 alert("⚠️ Please configure EmailJS keys in the script section to send real emails.");
                 return;
             }
@@ -2301,6 +2305,7 @@
             // Basic handling - ideally you'd parse URL params here for deep linking
             router.navigate('home');
         });
-    </script></body>
+    </script>
+</body>
 
 </html>
