@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  
+  <!-- Main Homepage (Contains About, Experience, Skills, Contact sections) -->
   <url>
-    <loc>https://adrianoblog038.github.io/Adriano_Elu/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://adrianoelu.com/index.html</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Individual Blog Posts -->
   <url>
-    <loc>https://adrianoblog038.github.io/Adriano_Elu/about.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://adrianoelu.com/read_blog.html?id=1</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
   <url>
-    <loc>https://adrianoblog038.github.io/Adriano_Elu/contact.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://adrianoelu.com/read_blog.html?id=2</loc>
+    <lastmod>2024-02-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://adrianoelu.com/read_blog.html?id=3</loc>
+    <lastmod>2024-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://adrianoelu.com/read_blog.html?id=4</loc>
+    <lastmod>2023-12-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://adrianoelu.com/read_blog.html?id=5</loc>
+    <lastmod>2023-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
