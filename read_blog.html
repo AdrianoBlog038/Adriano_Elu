@@ -315,6 +315,9 @@
                 <a href="index.html#blog"
                     class="block w-full text-left px-3 py-3 rounded-lg text-base font-medium bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"><i
                         class="fas fa-blog mr-3 w-5"></i>Blog</a>
+                <a href="index.html#contact"
+                    class="block w-full text-left px-3 py-3 rounded-lg text-base font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"><i
+                        class="fas fa-paper-plane mr-3 w-5"></i>Contact Me</a>
             </div>
         </div>
     </nav>
@@ -517,6 +520,9 @@
                 year: 'numeric', month: 'long', day: 'numeric'
             });
 
+            // Placeholder URL - REPLACE THIS WITH YOUR ACTUAL PROFILE IMAGE URL
+            const PROFILE_IMAGE_URL = "https://z-cdn-media.chatglm.cn/files/7b81a72d-348a-459d-bbdd-729152e7137d.png?auth_key=1879865716-6eccfb470bff4719a8aa8e816e1c8cec-0-20b826dbd7fa523912145b4a8b6c708b";
+
             // Content with requested sections removed
             const fullContent = `
                 <p class="lead text-xl font-light mb-6 text-gray-600 dark:text-gray-300">${post.excerpt}</p>
@@ -542,7 +548,8 @@
                                 </div>
                                 <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight" itemprop="headline">${post.title}</h1>
                                 <div class="flex items-center space-x-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-500 flex items-center justify-center text-white font-bold">AE</div>
+                                    <!-- Header Author Image Replaced -->
+                                    <img src="${PROFILE_IMAGE_URL}" alt="Adriano Ventura Elu" class="w-10 h-10 rounded-full object-cover border-2 border-white/20 shadow-sm" itemprop="image">
                                     <div class="text-white">
                                         <p class="font-medium" itemprop="name">Adriano Ventura Elu</p>
                                         <p class="text-xs text-white/70">Mathematics & Leadership</p>
@@ -576,7 +583,8 @@
                             <!-- Author Card -->
                             <div class="mt-10 bg-gradient-to-br from-primary-50 to-primary-100/50 dark:from-gray-800 dark:to-gray-700/50 rounded-2xl p-8 border border-primary-200 dark:border-primary-800/50">
                                 <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary-400 to-primary-500 flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">AE</div>
+                                    <!-- Author Card Image Replaced -->
+                                    <img src="${PROFILE_IMAGE_URL}" alt="Adriano Ventura Elu" class="w-20 h-20 rounded-full object-cover border-4 border-white/50 shadow-md flex-shrink-0" itemprop="image">
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Adriano Ventura Elu</h3>
                                         <p class="text-primary-600 dark:text-primary-400 text-sm font-medium mb-3">Mathematics Student & Community Leader</p>
