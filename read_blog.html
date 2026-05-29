@@ -517,37 +517,10 @@
                 year: 'numeric', month: 'long', day: 'numeric'
             });
 
+            // Content with requested sections removed
             const fullContent = `
                 <p class="lead text-xl font-light mb-6 text-gray-600 dark:text-gray-300">${post.excerpt}</p>
                 <p>${post.content}</p>
-                <h2 id="core-concepts">Core Concepts of ${post.category}</h2>
-                <p>When analyzing the impact of ${post.category} within the context of Timor-Leste, several key factors emerge. The intersection of theoretical knowledge and practical application becomes paramount in driving meaningful change.</p>
-                <h3 id="strategic-implementation">1. Strategic Implementation</h3>
-                <p>Effective implementation requires a structured approach. This involves identifying key stakeholders, aligning goals with community needs, and creating measurable outcomes that can be evaluated over time.</p>
-                <blockquote>
-                    "True leadership is not about being in charge. It is about taking care of those in your charge." — Simon Sinek
-                </blockquote>
-                <h3 id="role-of-data">2. The Role of Data and Analysis</h3>
-                <p>In an era of information, utilizing data to drive decisions is critical. Whether it is tracking student progress, managing organizational finances, or evaluating program impact, mathematical and analytical thinking provides a robust framework for decision-making.</p>
-                <ul>
-                    <li>Logical Reasoning and Critical Thinking</li>
-                    <li>Problem Solving through Systematic Approaches</li>
-                    <li>Data-Driven Decision Making</li>
-                    <li>Resource Optimization and Allocation</li>
-                </ul>
-                <h3 id="sustainable-systems">3. Building Sustainable Systems</h3>
-                <p>Sustainability in community development means creating systems that outlast individual involvement. This requires documentation, knowledge transfer, and building capacity within local communities so that progress continues even when specific leaders move on.</p>
-                <ol>
-                    <li>Document processes and lessons learned</li>
-                    <li>Train successors and build local capacity</li>
-                    <li>Create feedback mechanisms for continuous improvement</li>
-                    <li>Establish partnerships for long-term resource stability</li>
-                </ol>
-                <h4>Future Implications</h4>
-                <p>Looking ahead, the integration of these skills and approaches will determine the sustainability and scalability of youth-led initiatives across Timor-Leste. The combination of mathematical rigor with compassionate leadership creates a powerful toolkit for community transformation.</p>
-                <h2 id="reflections">Reflections and Takeaways</h2>
-                <p>Through my experiences with organizations like RYLA-TL, KETO, and the Academic Student Association at FCEN-UNTL, I have witnessed firsthand how the principles discussed above translate into real-world impact. Each experience has reinforced my belief that <strong>education paired with action</strong> is the most powerful catalyst for change.</p>
-                <p>I invite you to reflect on how these concepts apply to your own context. Whether you are a student, a community organizer, or simply someone who cares about making a difference, the tools of <strong>systematic thinking, compassionate leadership, and sustainable planning</strong> are available to everyone.</p>
             `;
 
             blogArticle.innerHTML = `
@@ -584,11 +557,7 @@
                             <div class="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 mb-10 border border-primary-200 dark:border-primary-800/50">
                                 <h2 class="text-sm font-bold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-3"><i class="fas fa-list mr-2"></i>Table of Contents</h2>
                                 <ul class="space-y-2 text-sm">
-                                    <li><a href="#core-concepts" class="text-primary-600 dark:text-primary-400 hover:underline">Core Concepts of ${post.category}</a></li>
-                                    <li class="pl-4"><a href="#strategic-implementation" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">1. Strategic Implementation</a></li>
-                                    <li class="pl-4"><a href="#role-of-data" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">2. The Role of Data and Analysis</a></li>
-                                    <li class="pl-4"><a href="#sustainable-systems" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">3. Building Sustainable Systems</a></li>
-                                    <li><a href="#reflections" class="text-primary-600 dark:text-primary-400 hover:underline">Reflections and Takeaways</a></li>
+                                    <!-- Links removed as sections were removed -->
                                 </ul>
                             </div>
 
