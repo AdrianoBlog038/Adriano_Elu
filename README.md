@@ -12,7 +12,7 @@ This is my professional portfolio built with HTML, Tailwind CSS, and vanilla Jav
 
 ## Live Site
 
-Visit the live site at: [Your GitHub Pages URL]
+Visit the live site at: [https://adrianoblog038.github.io/Adriano_Elu/]
 
 ## Technologies Used
 
